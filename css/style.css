@@ -1,0 +1,91 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Times New Roman';
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+}
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+.text {
+  font-size: 1.8rem;
+  text-align: center;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.containerbox {
+  background-color: #eeeeee;
+  width: 800px;
+  height: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.containerbox .box {
+  display: table;
+  width: 198px;
+  height: 118px;
+  background-color: #cfe7f5;
+  border: 1px solid #000000;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.containerbox .box.merge-col {
+  height: 238px;
+}
+.containerbox .box.col-not {
+  left: -400px;
+}
+.containerbox .box.col-1 {
+  left: 0;
+}
+.containerbox .box.col-2 {
+  left: 200px;
+}
+.containerbox .box.col-3 {
+  left: 400px;
+}
+.containerbox .box.col-4 {
+  left: 600px;
+}
+.containerbox .box.row-not {
+  top: -360px;
+}
+.containerbox .box.row-1 {
+  top: 0;
+}
+.containerbox .box.row-2 {
+  top: 120px;
+}
+.containerbox .box.row-3 {
+  top: 240px;
+}
+.containerbox .box.row-4 {
+  top: 360px;
+}
+.containerbox .box.big {
+  width: 398px;
+  height: 358px;
+  background-color: #83caff;
+  z-index: 10;
+}
+.containerbox .description {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

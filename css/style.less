@@ -1,0 +1,108 @@
+@fontFamilyDefault: 'Times New Roman';
+@backgroundContainerbox: #eeeeee;
+@backgroundBox: #cfe7f5;
+@backgroundBoxBig: #83caff;
+@backgroundBorderBox: #000000;
+@widthWrapper: 800px;
+@widthBox: 200px;
+@heightBox: 120px;
+@widthBorderBox: 1px;
+@heightBorderBox: @widthBorderBox;
+@paddingWrapper: 0;
+
+html {
+    font-size: 62.5%;
+    font-family: @fontFamilyDefault;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+}
+
+.wrapper {
+    width: @widthWrapper - @paddingWrapper * 2;
+    margin: 0 auto;
+    padding: @paddingWrapper;
+}
+
+.text {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto; 
+    margin-right: auto
+}
+
+.containerbox {
+    background-color: @backgroundContainerbox;
+    width: @widthBox * 4;
+    height: @heightBox * 4;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    .box {
+        display: table;
+        width: @widthBox - @widthBorderBox * 2;
+        height: @heightBox - @heightBorderBox * 2;
+        background-color: @backgroundBox;
+        border: @widthBorderBox solid @backgroundBorderBox;
+        font-size: 4rem;
+        text-align: center;
+        z-index: 5;
+        position: absolute;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    .box.merge-col {
+        height: ( @heightBox - @heightBorderBox ) * 2;
+    }
+    .box.col-not {
+        left: -@widthBox * 2;
+    }    
+    .box.col-1 {
+        left: 0;
+    }
+    .box.col-2 {
+        left: @widthBox;
+    }
+    .box.col-3 {
+        left: @widthBox * 2;
+    }
+    .box.col-4 {
+        left: @widthBox * 3;
+    }
+    .box.row-not {
+        top: -@heightBox * 3;
+    }
+    .box.row-1 {
+        top: 0;
+    }
+    .box.row-2 {
+        top: @heightBox;
+    }
+    .box.row-3 {
+        top: @heightBox * 2;
+    }
+    .box.row-4 {
+        top: @heightBox * 3;
+    }
+    .box.big {
+        width: @widthBox * 2 - @widthBorderBox * 2;
+        height: @heightBox * 3 - @heightBorderBox * 2;
+        background-color: @backgroundBoxBig;
+        z-index: 10;
+    }
+    .description {
+        display: table-cell;
+        vertical-align: middle; 
+        text-align: center; 
+    }
+}
